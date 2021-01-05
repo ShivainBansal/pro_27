@@ -1,4 +1,5 @@
 
+const Constraint=Matter.Constraint
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -23,11 +24,11 @@ function setup() {
 	bob4 = new Bob(390,400,15);
 	bob5 = new Bob(420,400,15);
 
-	rope1 =new Rope(bob1.body,{x:460,y:205})
-	rope2 =new Rope(bob2.body,{x:460,y:205})
-	rope3 =new Rope(bob3.body,{x:460,y:205})
-	rope4 =new Rope(bob4.body,{x:460,y:205})
-	rope5 =new Rope(bob5.body,{x:460,y:205})
+	rope1 =new Rope(bob1.body,{x:300,y:205})
+	rope2 =new Rope(bob2.body,{x:330,y:205})
+	rope3 =new Rope(bob3.body,{x:360,y:205})
+	rope4 =new Rope(bob4.body,{x:390,y:205})
+	rope5 =new Rope(bob5.body,{x:420,y:205})
 
 	Engine.run(engine);
   
@@ -55,5 +56,9 @@ function draw() {
   
 }
 
+function keyPressed() { 
+	if (keyCode === UP_ARROW) {
+Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45}); } 
+		}
 
 

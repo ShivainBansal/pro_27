@@ -6,7 +6,7 @@ class Rope{
             bodyA:bodyA,
             pointB:pointB,
             stiffness:0.04,
-            length:10
+            length:200
            }
         
           this.pointB=pointB 
@@ -20,6 +20,7 @@ class Rope{
          var pointB=this.pointB;
 
         strokeWeight(4);
+        stroke("green");
         line(pointA.x,pointA.y,pointB.x,pointB.y);
     
     
